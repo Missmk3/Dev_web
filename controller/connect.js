@@ -1,7 +1,7 @@
 const mysql = require ('mysql');
 
 //configurations de connexions des tables
-const user = mysql.createuser({
+const user = mysql.Create.user({
     id:'',
     name:'',
     rename:'',
@@ -41,7 +41,7 @@ exports.create = (req, res) => {
 
 // Récupérer et renvoyer tous les produits de la base de données
 exports.findAll = (req, res) => {
-    connexion.query('SELECT * FROM PRODUITS', (error, results) => {
+    connexion.query('SELECT * FROM PRODUITS WHERE id = ?',id, (error, results) => {
         if (error) {
             throw error;
         }

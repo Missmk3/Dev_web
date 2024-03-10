@@ -1,8 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser"); 
+const { getusers } = require("./controller/user");
 const port = process.env.PORT || 3000; // Utilisation de process.env.PORT pour le port
 const app = express();
-const routes = require('./controller/routes.js');
+
+
 
 
 // app.use(bodyParser.urlencoded({extension: true }));
@@ -14,41 +16,8 @@ app.listen(port, () => {
 });
 
 
-app.get("/", (req, res) => {
-    res.status(200).json({
-        id:'',
-        name:"KENGNI",
-        rename:"mires",
-        email:'kengnimires003@gmail',
-        password:'',
+app.get("/user",getusers)
 
-    })
 
-});
-
-app.get("/stuff", (req, res) => {
-    res.status(200).json({
-        id:'',
-        name:"TOKO",
-        rename:"joseph",
-        email:'',
-        password:'',
-
-    })
-
-});
-
-app.get("/lol", (req, res) => {
-    res.status(200).json({
-        id:'',
-        name:"LOULOU",
-        rename:"jean",
-        email:'',
-        password:'',
-
-    })
-
-    
-});
 
 
