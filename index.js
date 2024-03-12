@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 });
 
-app.get("/user",getusers);
+app.get("/users",getusers);
 
 
 app.listen(port, () => {
