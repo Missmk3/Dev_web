@@ -21,18 +21,10 @@ async function getAllUsers() {
 }
 
 
-
-
-
 // la fonction asynchrone retourne juste la fonction getAllusers et getAllproducts pour récupérer tt les données des utilisateurs et des produits
 async function getUsers(){
     return await getAllUsers();
 }
-
-
-
-
-
 
 
 module.exports = {

@@ -13,3 +13,4 @@ function getOffset(currentPage = 1, listPerPage) {
     getOffset,
     emptyOrRows
   }
+  
