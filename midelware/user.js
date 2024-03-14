@@ -21,19 +21,6 @@ async function getAllUsers() {
 }
 
 
-// Récupérez toutes les données de la table "product"
-async function getAllProducts() {
-    const conn = await getConnection(); // ensuite obtention d'une connexion avec la bd
-    try {
-        const [rows, fields] = await conn.execute('SELECT * FROM products');
-        return rows;
-    } catch (error) { // en cas d'erreur envoie un message 
-        console.error('Erreur lors de la requête SQL :', error);
-        throw error;
-    } finally {
-        conn.release(); // Libérez la connexion après utilisation
-    }
-}
 
 
 
@@ -42,9 +29,6 @@ async function getUsers(){
     return await getAllUsers();
 }
 
-async function getProducts(){
-    return await getAllProducts();
-}
 
 
 
@@ -54,7 +38,6 @@ async function getProducts(){
 module.exports = {
     getUser,
     getUsers,
-    getProducts,
 
 
 }
