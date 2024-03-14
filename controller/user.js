@@ -1,7 +1,5 @@
 const { getUsers } = require('../midelware/user');
 
-
-
 exports.getusers= async (req, res) => {
     try {
     const users = await getUsers();

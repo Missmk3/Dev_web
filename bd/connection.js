@@ -18,16 +18,16 @@ async function query(sql, params) {
 
     // A simple SELECT query
     try {
-    const [results, fields] = await connection.query(
+      const [results, fields] = await connection.query(
         sql, params
     );
-    console.log(results); // results contains rows returned by server
-    console.log(fields); // fields contains extra meta data about results, if available
+      console.log(results); // results contains rows returned by server
+      console.log(fields); // fields contains extra meta data about results, if available
     } catch (err) {
-    console.log(err);
+      console.log(err);
     }
 
-  return results;
+    return results;
 }
 
 module.exports = {

@@ -5,6 +5,6 @@ class Categorie{
         this.id = id;
         this.name = name;
     }
-    }
+}
     
     

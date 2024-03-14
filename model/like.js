@@ -9,7 +9,7 @@ class Events{
         this.id_events = id_events;
         
     }
-    }
+}
     
     
     

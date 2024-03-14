@@ -12,7 +12,7 @@ class Events{
         this.description = description;
         
     }
-    }
+}
     
     
     

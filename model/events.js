@@ -11,6 +11,6 @@ class Events{
         this.start = start ;
         this.end = end ;
     }
-    }
+}
     
     
