@@ -1,6 +1,6 @@
-const { getUsers } = require('../midelware/user');
+const { getUsers } = require('../midellware/user');
 
-exports.getusers= async (req, res) => {
+exports.getusers= async (req, res, next) => {
     try {
     const users = await getUsers();
     res.json(users);
@@ -8,3 +8,5 @@ exports.getusers= async (req, res) => {
     res.status(500).json({ error: 'Erreur lors de la récupération des données' });
     }
 }
+
+
