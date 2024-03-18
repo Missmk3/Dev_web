@@ -4,7 +4,7 @@ html
    body
       if(message)
          h4 #{message}
-         form(action = "/login" method = "POST")
-         input(name = "name" type = "text" required placeholder = "Name")
-         input(name = "password" type = "password" required placeholder = "Password")
-         button(type = "submit") Log in
+      form(action = "/users/login" method = "POST")
+         input(name="email" type="text" required placeholder="example@ucac-icam.com")
+         input(name="password" type="password" required placeholder="Password")
+         input(type="submit" value="Log in")
